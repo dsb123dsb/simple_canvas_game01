@@ -4,6 +4,7 @@ var ctx = canvas.getContext("2d");
 canvas.width = 512;
 canvas.height = 480;
 document.body.appendChild(canvas);
+//Create the audiu
 
 // Background image
 var bgReady = false;
@@ -61,16 +62,28 @@ var reset = function () {
 var update = function (modifier) {
 	if (38 in keysDown) { // Player holding up
 		hero.y -= hero.speed * modifier;
+		if( hero.y < 32 )
+			hero.y = 32;
 	}
 	if (40 in keysDown) { // Player holding down
 		hero.y += hero.speed * modifier;
+		if( hero.y >= 416) {
+			hero.y = 416;
+		}
 	}
 	if (37 in keysDown) { // Player holding left
 		hero.x -= hero.speed * modifier;
+		if( hero.x < 32){
+			hero.x = 32;
+		}
 	}
 	if (39 in keysDown) { // Player holding right
 		hero.x += hero.speed * modifier;
+		if( hero.x > 448){
+			hero.x = 448;
+		}
 	}
+
 
 	// Are they touching?
 	if (
