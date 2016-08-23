@@ -6,6 +6,7 @@
 3.添加css文件：canvas样式居中
 
 4.游戏成功时触发音效
+
 5.添加边界限制条件，限制英雄走出画布
 
 # How to make a simple HTML5 Canvas game
