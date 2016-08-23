@@ -1,3 +1,13 @@
+# 我的改善： #
+1.添加背景音乐：html中`<audio src="audio/backmusic.mp3" autoplay=true type="audio/mpeg" loop=true>f </audio>`
+
+2.将canvas等一些元素改写到html文件中
+
+3.添加css文件：canvas样式居中
+
+4.游戏成功时触发音效
+5.添加边界限制条件，限制英雄走出画布
+
 # How to make a simple HTML5 Canvas game
 
 Build your first HTML5 Canvas game in no time! [Read the whole article here.](http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/)
@@ -190,3 +200,5 @@ reset方法用于开始新一轮和游戏，在这个方法里我们将英雄放
 	main();
 
 总算完成了，这是本游戏最后一段代码了。先是设置一个初始的时间变量then用于首先运行main函数使用。然后调用 reset 函数来开始新一轮游戏（如果你还记得的话，这个函数的作用是将英雄放到画面中间同时将怪物放到随机的地方以方便英雄去捉它）。
+
+

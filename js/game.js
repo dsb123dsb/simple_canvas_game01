@@ -1,9 +1,11 @@
 // Create the canvas
-var canvas = document.createElement("canvas");
-var ctx = canvas.getContext("2d");
-canvas.width = 512;
+var canvas = document.getElementById("drawing");
+if(drawing.getContext){
+	var ctx = canvas.getContext("2d");
+}
+/*canvas.width = 512;
 canvas.height = 480;
-document.body.appendChild(canvas);
+document.body.appendChild(canvas);*/
 //Create the audiu
 
 // Background image
@@ -36,6 +38,7 @@ var hero = {
 };
 var monster = {};
 var monstersCaught = 0;
+var player=document.getElementById("monsterget")//游戏成功触发配乐
 
 // Handle keyboard controls
 var keysDown = {};
@@ -92,9 +95,18 @@ var update = function (modifier) {
 		&& hero.y <= (monster.y + 32)
 		&& monster.y <= (hero.y + 32)
 	) {
+		player.play();
 		++monstersCaught;
 		reset();
 	}
+	/*if (
+		hero.x >= (monster.x + 32)
+		|| monster.x >= (hero.x + 32)
+		|| hero.y >= (monster.y + 32)
+		|| monster.y >= (hero.y + 32)
+	) {
+		player.pause();
+	}*/
 };
 
 // Draw everything
@@ -112,7 +124,7 @@ var render = function () {
 	}
 
 	// Score
-	ctx.fillStyle = "rgb(250, 250, 250)";
+	ctx.fillStyle = "rgb(250, 0, 0)";
 	ctx.font = "24px Helvetica";
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
