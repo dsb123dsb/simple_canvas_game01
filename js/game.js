@@ -37,8 +37,8 @@ var hero = {
 	speed: 256 // movement in pixels per second
 };
 var monster = {};
-var monstersCaught = 0;
-var player=document.getElementById("monsterget")//游戏成功触发配乐
+var monstersCaught = 0;//来存储怪物被捉住的次数。
+var player=document.getElementById("monsterget")//获取audio元素
 
 // Handle keyboard controls
 var keysDown = {};
@@ -95,7 +95,7 @@ var update = function (modifier) {
 		&& hero.y <= (monster.y + 32)
 		&& monster.y <= (hero.y + 32)
 	) {
-		player.play();
+		player.play();//播放音乐
 		++monstersCaught;
 		reset();
 	}
