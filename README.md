@@ -10,7 +10,7 @@
 
 5.添加边界限制条件，限制英雄走出画布
 
-> 以下是自己具体创作过程：[源码地址（欢迎fork、star）](https://github.com/dsb123dsb/simple_canvas_game01/tree/hero2.0)
+> 以下是自己具体创作过程：[源码地址（欢迎fork、star）](https://github.com/dsb123dsb/simple_canvas_game01/tree/hero2.0) [试玩链接（触摸设备不支持）](http://yhgame.cethik.vip/)
 # 1.创建画布，创建媒体文件
 	//html文件中
 	<canvas id="drawing" width="512" height="480">A drawing of something.</canvas>
